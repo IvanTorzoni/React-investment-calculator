@@ -18,7 +18,8 @@ function App() {
     setUserInput(prevUserInput => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue
+        //aggiungo il + prima di newValue per evitare errori di tipo da parte di JS, senza avverrebbe una concatenazione tra stringhe
+        [inputIdentifier]: +newValue
       }
     });
   }
